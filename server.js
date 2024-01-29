@@ -95,9 +95,9 @@ app.get('/lists', (req, res) => {
 //     , 3000)
 // })
 
-// app.get('/null', (req, res) => {
-//     res.render('null')
-// })
+app.get('/null', (req, res) => {
+    res.render('null')
+})
 
 
 // Port
