@@ -1,0 +1,22 @@
+<aside class="music-image">
+    <img src="<%= music.image_url %>" alt="<%= music.title %> album cover.">
+</aside>
+
+<h2><%= music.title %></h2>
+
+<div class="music-details">
+    <ul>
+        <li>Artist: <%= music.artist %></li>
+        <li>Release Year: <%= music.year %></li>
+        <li>RYM Rating: <%= rating %></li>
+        <li>Genre: <%= music.genre %></li>
+    </ul>
+</div>
+
+<% if (currentUser.id) { %>
+    <form action="/music/<%= music.id %>?_method=delete" method="post">
+        <button>Delete</button>
+    </form>
+
+    <a href="/music/<%= music.id %>/edit">Edit Music Details</a>
+<% } %>

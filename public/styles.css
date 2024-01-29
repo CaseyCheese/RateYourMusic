@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(37, 133, 87);
+    text-align: center;
+}
+
+img {
+    width: 200px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.ui-card {
+    border: 1px solid rgb(37, 133, 87);
+    max-width: 256px;
+    height: 360px;
+    margin: 0 auto;
+}
+
+.ui-card img {
+    width: 100%;
+}
+
+/* ul {
+    text-align: center;
+    list-style-position: inside;
+} */
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: white;;
+}
+
+footer img {
+    height: 64px;
+    width: 64px;
+}

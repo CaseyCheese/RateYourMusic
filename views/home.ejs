@@ -1,0 +1,13 @@
+<a href="/music/add">Add a new song</a>
+<!-- <a href="/review">Rate a song</a> -->
+
+<div class="grid-wrapper">
+
+    <% for (let music of library) { %>
+        <div class="ui-card">
+            <h2><a href="/music/<%= music.id %>"><%= music.title %></a></h2>
+            <a href="/music/<%= music.id %>"><img src="<%= music.image_url %>" alt="Album cover for <%= music.title %>"></a>
+        </div>
+
+    <% } %>
+</div>

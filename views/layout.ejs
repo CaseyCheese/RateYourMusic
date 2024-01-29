@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateYourMusic</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <a href="/">
+                <div class="logo_image"><img src="https://e.snmc.io/3.0/img/logo/sonemic-512.png" alt="The logo for Rate Your Music."></div>
+                <span class="logo_name">RYM</span>
+            </a>
+        </div>
+
+        <div class="header_links">
+            <!-- <div class="divider"></div> -->
+            <a class="header_item" href="/new-music">new music</a>
+            <a class="header_item" href="/latest">reviews</a>
+            <a class="header_item" href="/charts">charts</a>
+            <a class="header_item" href="/lists">lists</a>
+            <!-- <div class="divider"></div> -->
+        </div>
+
+        <div class="header_search">
+            <form action="/null">
+                <button>Search</button>
+                <input type="text" placeholder="Search..." name="q">
+            </form>
+        </div>
+
+        <div class="header_profile">
+            <% if (currentUser.id) { %>
+                <p>Welcome Back <%= currentUser.email %></p>
+        
+                <form action="/accounts/logout?_method=delete" method="post">
+                    <button>sign out</button>
+                </form>
+
+                <form action="/accounts/delete?_method=delete" method="post">
+                    <button>delete account</button>
+                </form>
+            <% } else { %>
+                <p><a href="/accounts/login">sign in</a></p>
+            <% } %>
+        </div>
+    </header>
+
+    <%- body %>
+
+
+    <footer>
+        &copy;2024 CaseyCheese
+
+        <div class="footer_medias">
+            <a title="Follow us on Twitter" href="https://twitter.com/sonemic"><img src="https://www.iconninja.com/files/606/33/264/twitter-tweet-social-logo-icon.png" alt="Twitter logo"></a>
+            <a title="Follow us on Instagram" href="https://instagram.com/sonemic/"><img src="https://www.iconninja.com/files/298/120/46/instagram-icon.png" alt="Instagram logo"></a>
+            <a title="Like us on Facebook" href="https://facebook.com/sonemic.network"><img src="https://www.iconninja.com/files/565/277/107/logo-social-fb-facebook-icon.png" alt="Facebook logo"></a>
+            <a title="Follow us on Spotify" href="https://open.spotify.com/user/sonemic.com"><img src="https://www.iconninja.com/files/92/706/366/spotify-icon.png" alt="Spotify logo"></a>
+        </div>
+    </footer>
+</body>
+</html>
